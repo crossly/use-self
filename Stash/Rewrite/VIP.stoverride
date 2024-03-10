@@ -79,6 +79,13 @@ http:
       require-body: true
       timeout: 30
       max-size: 0
+    #  CamscannerProCrack 
+    - match: ^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?
+      name: CamscannerProCrack.js
+      type: response
+      require-body: true
+      timeout: 30
+      max-size: 0
   mitm:
     - "api.revenuecat.com"
     - "buy.itunes.apple.com"
@@ -95,6 +102,7 @@ http:
     - "*.meitu.com"
     - "api.getmimo.com"
     - "ars.alar.my"
+    - "ap*.intsig.net"
 
 script-providers:
   revenuecat.js:
@@ -129,4 +137,7 @@ script-providers:
     interval: 86400
   alarmy.js:
     url: https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/alarmy.js
+    interval: 86400
+  CamscannerProCrack.js:
+    url: ttps://raw.githubusercontent.com/crossly/use-self/main/Stash/Scrips/Crack/CamscannerProCrack.js
     interval: 86400
